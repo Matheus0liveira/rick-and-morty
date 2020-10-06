@@ -1,0 +1,19 @@
+{
+  "name": "rick-and-morty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Matheus0liveira/rick-and-morty.git",
+  "author": "Matheus0liveira <matheusfilho98.ms@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.2.0"
+  }
+}
