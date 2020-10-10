@@ -1,5 +1,16 @@
 import { useState } from 'react';
-import { StyledMain, Text, Description, StyledButton, StyledArrowDown } from './styles';
+import { FiSearch } from 'react-icons/fi';
+import {
+  StyledMain,
+  Text,
+  Description,
+  StyledButton,
+  StyledArrowDown,
+  StyledProfiles,
+  InputSearch,
+  Box,
+  Line
+} from './styles';
 import { Container } from '../../assets/globalStyles';
 import Lottie from 'react-lottie';
 
@@ -30,12 +41,14 @@ function Home() {
 
 
           <Description showDescrition={showDescrition}>
+
             A série mostra as aventuras insólitas do cientista beberrão Rick Sanchez e seu neto
             inseguro e com hormônios em ebulição Morty Smith, membros de uma família americana comum,
             composta também por Jerry, um pai ignorante; Beth, uma mãe sensata e Summer,
             uma irmã mais velha, típica adolescente alienada, que se compadece do irmão
             quando passa a integrar as aventuras de seu avô.
-              </Description>
+
+          </Description>
 
 
 
@@ -54,12 +67,19 @@ function Home() {
         </Container>
       </StyledMain>
 
-      <p>swed</p>
-      <p>swed</p>
-      <p>swed</p>
-      <p>swed</p>
-      <p>swed</p>
-      <p>swed</p>
+      <StyledProfiles>
+        <Box />
+        <Container>
+          <div>
+            <Text person >Personagens</Text>
+            <Line />
+          </div>
+          <InputSearch>
+            <input type="text" placeholder='Pesquisar' />
+            <StyledButton search ><FiSearch /></StyledButton>
+          </InputSearch>
+        </Container>
+      </StyledProfiles>
 
     </>
   );
