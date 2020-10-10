@@ -1,6 +1,16 @@
 import styled, { css } from 'styled-components';
 
 
+export const StyledMain = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F8F8F2;
+  height: calc(100vh - 8rem);
+
+  
+`;
+
 
 export const Text = styled.h1`
   text-align: center;
@@ -8,31 +18,30 @@ export const Text = styled.h1`
   font-weight: bold;
   color: #282A36;  
 `;
+
 export const Description = styled.p`
   text-align: justify;
   font-weight: lighter;
   margin: 2rem 0;
-  font-size: 2rem;
+  max-height: 2000px;
+  font-size: min(2rem, 10vw);
   line-height: 1.5;
   color: #282A36;  
-  transition: all .2s; 
+  visibility: visible;
+  transition: all .5s; 
+
+
 
 
   ${props => !props.showDescrition && css`
    opacity: 0;
-   margin-top: -14rem;
+   max-height: 0;
+   visibility: hidden;
 
     
   `}
 
 
-`;
-export const StyledMain = styled.h1`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #F8F8F2;
-  height: calc(100vh - 8rem);
 `;
 export const StyledButton = styled.button`
   /* width: 10rem; */
