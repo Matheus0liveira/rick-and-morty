@@ -1,0 +1,59 @@
+import styled, { css } from 'styled-components';
+
+
+export const StyledCard = styled.article`
+  display: flex;
+
+  background: #44475A;
+  width: 45%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+
+  img{
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+  }
+
+
+   @media (max-width: 840px){
+      
+    width: 100%;
+  }
+
+  
+`
+
+
+export const Text = styled.h1`
+
+margin: 2rem 0 0 2rem;
+
+${props => props.title && css`
+
+  margin-top: 1rem;
+  color: #F8F8F2;
+  font-weight: bold;
+  font-size: 2rem;
+
+`}
+
+${props => props.description && css`
+
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0 0  2rem;
+  color: #CCCCCC;
+  font-weight: lighter ;
+`}
+
+`
+export const BallIndicator = styled.h1`
+
+  width: 1rem;
+  height: 1rem;
+  background: #50FA7B;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+
+`

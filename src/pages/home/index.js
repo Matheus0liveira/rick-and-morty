@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Lottie from 'react-lottie';
 import { FiSearch } from 'react-icons/fi';
 import {
   StyledMain,
@@ -9,12 +10,15 @@ import {
   StyledProfiles,
   InputSearch,
   Box,
-  Line
+  Line,
+  SectionCards
 } from './styles';
-import { Container } from '../../assets/globalStyles';
-import Lottie from 'react-lottie';
 
 import SwipeDown from '../../../public/swipeDown.json';
+
+import { Container } from '../../assets/globalStyles';
+
+import Card from '../../compoenents/Card';
 
 function Home() {
   const [showDescrition, setShowDescription] = useState(false)
@@ -53,14 +57,14 @@ function Home() {
 
 
 
-          <StyledButton onClick={() => setShowDescription(!showDescrition)} > SOBRE</StyledButton>
+          <StyledButton onClick={() => setShowDescription(!showDescrition)} about > SOBRE</StyledButton>
 
           <StyledArrowDown>
             <Lottie
               isClickToPauseDisabled
               options={defaultOptions}
-              height={60}
-              width={60} />
+              height={40}
+              width={40} />
           </StyledArrowDown>
 
 
@@ -68,17 +72,46 @@ function Home() {
       </StyledMain>
 
       <StyledProfiles>
+
+
         <Box />
+
         <Container>
+
           <div>
+
             <Text person >Personagens</Text>
             <Line />
+
           </div>
           <InputSearch>
+
             <input type="text" placeholder='Pesquisar' />
-            <StyledButton search ><FiSearch /></StyledButton>
+
+            <StyledButton search >
+              <FiSearch />
+            </StyledButton>
+
           </InputSearch>
+
+
         </Container>
+
+        <Container>
+          <SectionCards>
+
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+
+          </SectionCards>
+
+        </Container>
+
       </StyledProfiles>
 
     </>

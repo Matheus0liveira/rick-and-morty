@@ -8,6 +8,11 @@ export const StyledMain = styled.h1`
   background: #F8F8F2;
   height: calc(100vh - 8rem);
 
+  img{
+    width: 10rem;
+    margin: 0 auto;
+  }
+
   
 `;
 
@@ -21,8 +26,14 @@ export const Text = styled.h1`
   ${props => props.person && css`
 
     color: #F8F8F2;
-    font-size: 4rem;
+  font-size: min(4rem, 10vw);
     text-align: left;
+
+
+    @media (max-width: 840px){
+
+    text-align: center;
+    }
 
   `}
 `;
@@ -53,17 +64,28 @@ export const Description = styled.p`
 
 `;
 export const StyledButton = styled.button`
-  /* width: 10rem; */
-  padding: 0.8rem 5rem;
-  border: 0;
-  border-radius: 0.6rem;
-  font-weight: bold;
-  color: #F8F8F2;
-  background: #44475A;
-  text-align: center;
-  margin: 0 auto;
+
   cursor: pointer;
   transition: background .2s ease;
+
+  ${props => props.about && css`
+
+    padding: 0.8rem 5rem;
+    border: 0;
+    border-radius: 0.6rem;
+    font-weight: bold;
+    color: #F8F8F2;
+    background: #44475A;
+    text-align: center;
+    margin: 0 auto;
+
+
+    @media (max-width: 400px) { 
+        margin-bottom: 20rem;
+
+    }
+
+  `}
 
   &:hover{
   background: #292A36;
@@ -88,6 +110,11 @@ export const StyledButton = styled.button`
     svg{
       font-size: 2rem;
     }
+
+     @media (max-width: 840px){
+      margin-top: 2rem;
+      width: 100%;
+  }
     
   `}
 
@@ -110,6 +137,11 @@ export const StyledProfiles = styled.div`
   div{
     flex-direction: row;
     justify-content: space-between;
+
+    @media (max-width: 840px){
+
+    flex-direction: column;
+    }
   }
 
 
@@ -117,12 +149,14 @@ export const StyledProfiles = styled.div`
  
 `;
 export const InputSearch = styled.div`
+  width: 45%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #282A36;
 
   input{
+    width: 100%;
     padding: 0 2rem; 
     height: 4rem;
     border: 0;
@@ -137,10 +171,19 @@ export const InputSearch = styled.div`
     }
 
 
+    @media (max-width: 840px){
+
+      margin-right: 0;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+
   }
 
  
 `;
+
 
 export const Box = styled.div`
 
@@ -156,9 +199,29 @@ export const Box = styled.div`
   margin: 0 auto -3rem auto;
   transform: rotate(45deg);
 `;
+
+
 export const Line = styled.div`
   width: 40rem;
   height: 0.1rem; 
   background: #BD93F9;
   margin-top: 2rem;
+
+
+  @media (max-width: 840px){
+      
+    margin: 2rem auto;
+    width: 100%;
+  }
+`;
+
+
+export const SectionCards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5rem;
+
+  margin-top: 10rem;
+  width: 100%;
 `;
