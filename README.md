@@ -62,7 +62,7 @@ This project aims to show characters from the series Rick And Morty and their cu
 <br/> 
 <br/>
 
-### <p id='layout'>🖌 Layout</p>
+### <p id='layout'> 🖌 Layout</p>
 
 Project layout on figma &rarr; <a href='https://www.figma.com/file/nU30kL0fdQqrvLaydG4ydD/RickAndMorty?node-id=97%3A0'>Figma</a>
 
