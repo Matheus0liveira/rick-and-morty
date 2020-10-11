@@ -53,6 +53,22 @@ ${props => props.description && css`
   font-weight: lighter ;
 `}
 
+${props => props.ball && css`
+
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0 0  0.2rem;
+  color: #CCCCCC;
+  font-weight: lighter;
+`}
+
+`
+export const Ball = styled.span`
+
+ display:flex;
+ align-items: center;
+ margin-left: 2rem;
+
 `
 export const BallIndicator = styled.h1`
 

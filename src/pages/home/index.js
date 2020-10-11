@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Lottie from 'react-lottie';
 import { FiSearch, FiArrowLeft, FiArrowRight, FiHeart } from 'react-icons/fi';
 import {
@@ -22,7 +22,9 @@ import { Container } from '../../assets/globalStyles';
 import Card from '../../compoenents/Card';
 
 function Home() {
-  const [showDescrition, setShowDescription] = useState(false)
+  const [showDescrition, setShowDescription] = useState(false);
+
+  const searchRef = useRef(null);
 
 
   const defaultOptions = {
@@ -33,6 +35,15 @@ function Home() {
       preserveAspectRatio: 'xMidYMid slice'
     }
 
+  };
+
+
+
+  const handleSubmit = (event) => {
+
+    event.preventDefault();
+
+    console.log(searchRef.current.value);
   };
 
 
@@ -58,7 +69,7 @@ function Home() {
 
 
 
-          <StyledButton onClick={() => setShowDescription(!showDescrition)} about > SOBRE</StyledButton>
+          <StyledButton onClick={() => setShowDescription(!showDescrition)} about='true' > SOBRE</StyledButton>
 
           <StyledArrowDown>
             <Lottie
@@ -81,15 +92,19 @@ function Home() {
 
           <div>
 
-            <Text person={true} >Personagens</Text>
+            <Text person='true' >Personagens</Text>
             <Line />
 
           </div>
-          <InputSearch>
+          <InputSearch onSubmit={handleSubmit}>
 
-            <input type="text" placeholder='Pesquisar' />
+            <input
+              ref={searchRef}
+              type="text"
+              placeholder='Pesquisar'
+            />
 
-            <StyledButton search={true} >
+            <StyledButton type='submit' search='true' >
               <FiSearch />
             </StyledButton>
 
@@ -115,12 +130,12 @@ function Home() {
         </Container>
         <Container>
           <CountPages>
-            <StyledButton countPage={true}> <FiArrowLeft /> Prev</StyledButton>
-            <Text count={true}>01</Text>
-            <StyledButton countPage={true}>Next <FiArrowRight /></StyledButton>
+            <StyledButton countPage='true'> <FiArrowLeft /> Prev</StyledButton>
+            <Text count='true'>01</Text>
+            <StyledButton countPage='true'>Next <FiArrowRight /></StyledButton>
           </CountPages>
         </Container>
-        <Text footer={true}>Created By: <a target='_blank' href='https://github.com/Matheus0liveira'> Matheus Oliveira <span><FiHeart /> </span> </a></Text>
+        <Text footer='true'>Created By: <a target='_blank' href='https://github.com/Matheus0liveira'> Matheus Oliveira <span><FiHeart /> </span> </a></Text>
       </StyledProfiles>
       <footer>
 

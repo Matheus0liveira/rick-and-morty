@@ -68,6 +68,9 @@ export const Text = styled.h1`
        opacity: 0.5;
      }
     }
+    a{
+      margin: 0 0.5rem;
+    }
     span{
       margin-left: 0.5rem;
     }
@@ -144,17 +147,23 @@ export const StyledButton = styled.button`
 
 
     &:hover{
-      background: #44475A;
+      background: #50FA7B;
     }
 
     svg{
       font-size: 2rem;
     }
 
-     @media (max-width: 840px){
+    @media (max-width: 840px){
       margin-top: 2rem;
+      width: 20%;
+    }
+
+    @media (max-width: 420px){
+
       width: 100%;
-  }
+      margin-top: 0;
+    }
     
   `}
   ${props => props.countPage && css`
@@ -216,7 +225,7 @@ export const StyledProfiles = styled.div`
 
  
 `;
-export const InputSearch = styled.div`
+export const InputSearch = styled.form`
   width: 45%;
   display: flex;
   align-items: center;
@@ -249,8 +258,14 @@ export const InputSearch = styled.div`
 
   } 
     @media (max-width: 840px){
-
+      
       width: 100%;
+      gap: 4rem;
+    }
+    @media (max-width: 420px){
+      
+      flex-wrap: wrap;
+      gap: 2rem;
     }
 
  
@@ -297,7 +312,7 @@ export const SectionCards = styled.div`
   margin-top: 10rem;
   width: 100%;
 `;
-export const CountPages = styled.div`
+export const CountPages = styled.span`
     display: flex;
     align-items: center;
     justify-content: center;
