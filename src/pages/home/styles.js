@@ -36,6 +36,46 @@ export const Text = styled.h1`
     }
 
   `}
+  ${props => props.count && css`
+
+    color: #BD93F9;
+    font-size: 1.8rem;
+    margin: 2rem;
+  
+
+  `}
+  ${props => props.footer && css`
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+    color: #F8F8F2;
+    font-size: 1.6rem;
+    padding: 4rem 0 2rem 0;
+
+  
+    a,span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #BD93F9;
+
+
+      &:hover{
+       opacity: 0.5;
+     }
+    }
+    span{
+      margin-left: 0.5rem;
+    }
+
+
+  
+
+  `}
 `;
 
 export const Description = styled.p`
@@ -117,6 +157,33 @@ export const StyledButton = styled.button`
   }
     
   `}
+  ${props => props.countPage && css`
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 0;
+    border-radius: 0.8rem;
+    background: #282A36;
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,1);
+
+    color: #F8F8F2;
+    font-weight: bold;
+  
+    svg{
+       font-size: 2rem;
+       margin: 0 1rem;
+    }
+
+
+    &:hover{
+
+    background: #BD93F9;
+    color: #282A36;
+    }
+  `}
 
 `;
 
@@ -125,14 +192,15 @@ export const StyledArrowDown = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 4rem;
+  bottom: 1rem;
+  z-index: 2;
 
  
 `;
 
 export const StyledProfiles = styled.div`
   background: #282A36;
-  padding: 6rem 0;
+  padding: 6rem 0 0 0;
 
   div{
     flex-direction: row;
@@ -179,7 +247,11 @@ export const InputSearch = styled.div`
     }
 
 
-  }
+  } 
+    @media (max-width: 840px){
+
+      width: 100%;
+    }
 
  
 `;
@@ -224,4 +296,10 @@ export const SectionCards = styled.div`
 
   margin-top: 10rem;
   width: 100%;
+`;
+export const CountPages = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem auto;
 `;

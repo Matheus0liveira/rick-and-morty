@@ -8,7 +8,12 @@ export const StyledCard = styled.article`
   width: 45%;
   border-radius: 0.8rem;
   overflow: hidden;
+  padding-right: 2rem;
+  transition: transform .2s ease;
 
+  &:hover{
+    transform: scale(1.01);
+  }
 
   img{
     border-top-left-radius: 0.8rem;
@@ -16,10 +21,11 @@ export const StyledCard = styled.article`
   }
 
 
-   @media (max-width: 840px){
+   @media (max-width: 980px){
       
     width: 100%;
-  }
+
+   }
 
   
 `

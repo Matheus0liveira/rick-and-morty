@@ -36,7 +36,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding: 0 2%;
 

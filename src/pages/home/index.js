@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Lottie from 'react-lottie';
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiArrowLeft, FiArrowRight, FiHeart } from 'react-icons/fi';
 import {
   StyledMain,
   Text,
@@ -11,7 +11,8 @@ import {
   InputSearch,
   Box,
   Line,
-  SectionCards
+  SectionCards,
+  CountPages
 } from './styles';
 
 import SwipeDown from '../../../public/swipeDown.json';
@@ -63,8 +64,8 @@ function Home() {
             <Lottie
               isClickToPauseDisabled
               options={defaultOptions}
-              height={40}
-              width={40} />
+              height={80}
+              width={80} />
           </StyledArrowDown>
 
 
@@ -80,7 +81,7 @@ function Home() {
 
           <div>
 
-            <Text person >Personagens</Text>
+            <Text person={true} >Personagens</Text>
             <Line />
 
           </div>
@@ -88,7 +89,7 @@ function Home() {
 
             <input type="text" placeholder='Pesquisar' />
 
-            <StyledButton search >
+            <StyledButton search={true} >
               <FiSearch />
             </StyledButton>
 
@@ -110,9 +111,20 @@ function Home() {
 
           </SectionCards>
 
-        </Container>
 
+        </Container>
+        <Container>
+          <CountPages>
+            <StyledButton countPage={true}> <FiArrowLeft /> Prev</StyledButton>
+            <Text count={true}>01</Text>
+            <StyledButton countPage={true}>Next <FiArrowRight /></StyledButton>
+          </CountPages>
+        </Container>
+        <Text footer={true}>Created By: <a target='_blank' href='https://github.com/Matheus0liveira'> Matheus Oliveira <span><FiHeart /> </span> </a></Text>
       </StyledProfiles>
+      <footer>
+
+      </footer>
 
     </>
   );
