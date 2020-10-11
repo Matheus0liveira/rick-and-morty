@@ -4,7 +4,7 @@ import { FiArrowLeft } from 'react-icons/fi';
 
 import Lottie from 'react-lottie';
 
-import { Styled404, Text, StyledButton } from './styles';
+import Styled404, { Text, StyledButton } from './styles';
 
 import Error404 from '../../../public/Error.json';
 
