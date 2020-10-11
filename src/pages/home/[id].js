@@ -86,7 +86,7 @@ function Home({ data, params }) {
 
     const name = searchRef.current.value;
 
-    const results = await api.get(`/character/?name=${name}`);
+    const results = await api.get(`/character/?`);
 
     if (results) {
       setDataCard(results.data);
@@ -185,7 +185,7 @@ function Home({ data, params }) {
 
 
           <StyledButton
-            name='showAndHideDescription'
+
             onClick={() => setShowDescription(!showDescrition)}
             about='true' >
 
@@ -226,7 +226,7 @@ function Home({ data, params }) {
               placeholder='Pesquisar'
             />
 
-            <StyledButton name='search' type='submit' search='true' >
+            <StyledButton type='submit' search='true' >
               <FiSearch />
             </StyledButton>
 
@@ -269,14 +269,14 @@ function Home({ data, params }) {
               (
 
 
-                <StyledButton name='back' back='true' onClick={backHomeOnePage} ><FiArrowLeft /> Voltar</StyledButton>
+                <StyledButton back='true' onClick={backHomeOnePage} ><FiArrowLeft /> Voltar</StyledButton>
               )
               :
               (
 
                 <>
                   <StyledButton
-                    name='returnPage'
+
                     countPage='true'
                     onClick={handleMoveToPrevPage}
 
@@ -293,7 +293,7 @@ function Home({ data, params }) {
 
 
                   <StyledButton
-                    name='nextPage'
+
                     countPage='true'
                     onClick={handleMoveToNextPage}
                   >
