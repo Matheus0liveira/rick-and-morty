@@ -167,7 +167,7 @@ function Home({ data, params }) {
     <>
       <StyledMain>
         <Container>
-          <img src="/rick.svg" alt="" />
+          <img src="/rick.svg" alt="Rick Sanches" />
           <Text>Rick and Morty</Text>
 
 
@@ -185,6 +185,7 @@ function Home({ data, params }) {
 
 
           <StyledButton
+            name='showAndHideDescription'
             onClick={() => setShowDescription(!showDescrition)}
             about='true' >
 
@@ -225,7 +226,7 @@ function Home({ data, params }) {
               placeholder='Pesquisar'
             />
 
-            <StyledButton type='submit' search='true' >
+            <StyledButton name='search' type='submit' search='true' >
               <FiSearch />
             </StyledButton>
 
@@ -268,13 +269,14 @@ function Home({ data, params }) {
               (
 
 
-                <StyledButton back='true' onClick={backHomeOnePage} ><FiArrowLeft /> Voltar</StyledButton>
+                <StyledButton name='back' back='true' onClick={backHomeOnePage} ><FiArrowLeft /> Voltar</StyledButton>
               )
               :
               (
 
                 <>
                   <StyledButton
+                    name='returnPage'
                     countPage='true'
                     onClick={handleMoveToPrevPage}
 
@@ -290,13 +292,14 @@ function Home({ data, params }) {
 
 
 
-                  <StyledButton countPage='true'
-
+                  <StyledButton
+                    name='nextPage'
+                    countPage='true'
                     onClick={handleMoveToNextPage}
                   >
 
                     Next
-               <FiArrowRight />
+                    <FiArrowRight />
 
                   </StyledButton>
                 </>

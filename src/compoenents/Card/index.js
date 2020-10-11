@@ -7,7 +7,7 @@ const Card = ({ results }) => {
       { results.map(person => (
 
         <StyledCard key={person.id}>
-          <img src={person.image} alt="" />
+          <img src={person.image} alt={person.name} />
           <div>
             <Text title='true'>{person.name}</Text>
             <Ball>

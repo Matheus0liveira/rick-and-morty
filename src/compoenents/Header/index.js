@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <img src="/rick.svg" alt="" width="50" />
+        <img src="/rick.svg" alt="Rick Sanches" width="50" />
       </Container>
     </StyledHeader>
   );
