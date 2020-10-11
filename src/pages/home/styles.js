@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 
-export const StyledMain = styled.h1`
+const StyledMain = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -318,3 +318,7 @@ export const CountPages = styled.span`
     justify-content: center;
     margin: 4rem auto;
 `;
+
+
+
+export default StyledMain;

@@ -74,8 +74,17 @@ export const BallIndicator = styled.h1`
 
   width: 1rem;
   height: 1rem;
-  background: #50FA7B;
+  
   border-radius: 50%;
   margin-right: 0.5rem;
 
+  ${props => props.status === 'Alive' && css`
+    background: #50FA7B;
+  `}
+  ${props => props.status === 'Dead' && css`
+    background: #FF5555;
+  `}
+  ${props => props.status === 'unknown' && css`
+    background: #282A36;
+  `}
 `

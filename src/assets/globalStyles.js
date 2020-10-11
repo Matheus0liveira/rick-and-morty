@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
   body,
   html{
     background: #F8F8F2;
+    scroll-behavior: smooth;
 
   }
 
