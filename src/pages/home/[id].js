@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
 import Router, { useRouter } from 'next/router';
 import Lottie from 'react-lottie';
 import { FiSearch, FiArrowLeft, FiArrowRight, FiHeart } from 'react-icons/fi';
@@ -35,17 +34,26 @@ const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 function Home({ data, params }) {
 
+  const [dataCard, setDataCard] = useState(data);
 
   const [showDescrition, setShowDescription] = useState(false);
 
   const [loading, setLoading] = useState(true);
-  const [showNextPage, setShowNextPage] = useState(true);
+
+  const [disableButtons, setDisableButtons] = useState(false);
 
   const searchRef = useRef(null);
 
   const router = useRouter();
 
   const myScroll = useRef(null);
+
+
+  useEffect(() => {
+
+    setDataCard(data);
+  }, [data])
+
 
   const executeScroll = () => scrollToRef(myScroll);
 
@@ -72,9 +80,21 @@ function Home({ data, params }) {
   };
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
 
     event.preventDefault();
+
+    const name = searchRef.current.value;
+
+    const results = await api.get(`/character/?name=${name}`);
+
+    if (results) {
+      setDataCard(results.data);
+
+      setDisableButtons(true);
+    }
+    console.log(results.data);
+
   };
 
 
@@ -82,15 +102,14 @@ function Home({ data, params }) {
 
 
 
-    if (data.info.next === null) {
+    if (!dataCard.info.next) {
 
-      return showNextPage(false);
+      return ''
 
     }
 
 
-    const nextPage = data.info.next.split('page=')[1];
-    setShowNextPage(true);
+    const nextPage = dataCard.info.next.split('page=')[1];
 
     return router.push(nextPage);
 
@@ -100,27 +119,29 @@ function Home({ data, params }) {
 
   const handleMoveToPrevPage = () => {
 
+    if (!dataCard.info.prev) {
 
+      return ''
 
-
-    if (data.info.prev !== null) {
-
-      const prevPage = data.info.prev.split('page=')[1];
-
-      router.push(`${prevPage}`);
     }
 
 
+    const prevPage = dataCard.info.prev.split('page=')[1];
+    return router.push(`${prevPage}`);
+
+
+
   };
+  const backHomeOnePage = () => {
 
-
-  console.log(data.info.next);
-  console.log(data.info.prev);
+    setDisableButtons(false);
+    return router.push(`1`);
+  }
 
   Router.events.on('routeChangeStart', () => {
 
 
-    if (data.info.next !== null) {
+    if (!dataCard.info.next) {
 
 
       setLoading(false)
@@ -131,7 +152,7 @@ function Home({ data, params }) {
   Router.events.on('routeChangeComplete', () => {
 
 
-    if (data.info.next !== null) {
+    if (dataCard.info.next !== null) {
 
       setLoading(true);
       executeScroll();
@@ -220,7 +241,7 @@ function Home({ data, params }) {
               (
 
 
-                <Card results={data.results} />
+                <Card results={dataCard.results} />
               )
 
               :
@@ -241,10 +262,47 @@ function Home({ data, params }) {
         </Container>
         <Container>
           <CountPages>
-            <StyledButton countPage='true' onClick={handleMoveToPrevPage}> <FiArrowLeft /> Prev</StyledButton>
-            <Text count='true'>{params.id}</Text>
 
-            <StyledButton countPage='true' onClick={handleMoveToNextPage}>Next <FiArrowRight /></StyledButton>
+            {disableButtons
+              ?
+              (
+
+
+                <StyledButton back='true' onClick={backHomeOnePage} ><FiArrowLeft /> Voltar</StyledButton>
+              )
+              :
+              (
+
+                <>
+                  <StyledButton
+                    countPage='true'
+                    onClick={handleMoveToPrevPage}
+
+                  >
+
+                    <FiArrowLeft />
+                    Prev
+
+            </StyledButton>
+
+
+                  <Text count='true'>{params.id}</Text>
+
+
+
+                  <StyledButton countPage='true'
+
+                    onClick={handleMoveToNextPage}
+                  >
+
+                    Next
+               <FiArrowRight />
+
+                  </StyledButton>
+                </>
+              )}
+
+
 
           </CountPages>
         </Container>

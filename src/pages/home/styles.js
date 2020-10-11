@@ -193,6 +193,32 @@ export const StyledButton = styled.button`
     color: #282A36;
     }
   `}
+  ${props => props.back && css`
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 0;
+    border-radius: 0.8rem;
+    background: #282A36;
+    box-shadow: 0px 0px 30px -10px rgba(0,0,0,1);
+
+    color: #F8F8F2;
+    font-weight: bold;
+  
+    svg{
+       font-size: 2rem;
+       margin: 0 1rem;
+    }
+
+
+    &:hover{
+
+    background: #BD93F9;
+    color: #282A36;
+`}
 
 `;
 
