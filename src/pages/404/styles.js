@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import Lottie from 'react-lottie';
-
-export const Styled404 = styled.div`
+const Styled404 = styled.div`
 
    display: flex;
    align-items: center;
@@ -56,3 +54,5 @@ export const StyledButton = styled.h1`
 
 
 `;
+
+export default Styled404;
