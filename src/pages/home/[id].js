@@ -93,7 +93,6 @@ function Home({ data, params }) {
 
       setDisableButtons(true);
     }
-    console.log(results.data);
 
   };
 
