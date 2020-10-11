@@ -1,9 +1,0 @@
-{
-  "/404": "pages/404.html",
-  "/404/styles": "pages/404/styles.html",
-  "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/home/[id]": "pages/home/[id].js",
-  "/home/styles": "pages/home/styles.html",
-  "/_error": "pages/_error.js"
-}

@@ -1,1 +1,0 @@
-{"ast":null,"code":"import axios from 'axios';\nvar api = axios.create({\n  baseURL: 'https://rickandmortyapi.com/api/'\n});\nexport default api;","map":null,"metadata":{},"sourceType":"module"}
