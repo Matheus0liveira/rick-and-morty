@@ -86,7 +86,7 @@ function Home({ data, params }) {
 
     const name = searchRef.current.value;
 
-    const results = await api.get(`/character/?`);
+    const results = await api.get(`/character/?name=${name}`);
 
     if (results) {
       setDataCard(results.data);
