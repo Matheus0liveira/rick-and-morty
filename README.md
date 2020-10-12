@@ -42,7 +42,7 @@ This project is based on the American series Rick And Morty, this project uses t
 
 ### <p id='functionalities'>⚙ Functionalities</p>
 
-This project aims to show characters from the series Rick And Morty and their current state, I try the possibility of being able to do research by the name of the character
+This project aims to show characters from the series Rick And Morty and their current state, I try the possibility of being able to do research by the name of the character.
 
 <br/> 
 <br/>
@@ -119,4 +119,4 @@ Project layout on figma &rarr; <a href='https://www.figma.com/file/nU30kL0fdQqrv
 
 ### <p id='author'>🧔🏿 Author</p>
 
-Created By: <a href='https://github.com/Matheus0liveira'> Matheus Oliveira </a>
+Created By: <a href='https://github.com/Matheus0liveira'> Matheus Oliveira. </a>
