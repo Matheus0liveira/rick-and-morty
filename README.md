@@ -6,6 +6,7 @@
 <a href='#about'>Rick And Morty </a>|
 <a href='#tecnology'>Tecnology</a> |
 <a href='#functionalities'>Functionalities </a>|
+<a href='#install'>Install </a>|
 <a href='#screen'>Screens </a>|
 <a href='#layout'>Layout </a>|
 <a href='#author'>Author </a>
@@ -42,6 +43,51 @@ This project is based on the American series Rick And Morty, this project uses t
 ### <p id='functionalities'>⚙ Functionalities</p>
 
 This project aims to show characters from the series Rick And Morty and their current state, I try the possibility of being able to do research by the name of the character
+
+<br/> 
+<br/>
+
+### <p id='install'>🔥 Install</p>
+
+#### First clone the project
+
+```shell
+$ git clone https://github.com/Matheus0liveira/rick-and-morty.git
+```
+
+<br/>
+
+#### Next step install dependencies
+
+```shell
+$ yarn
+
+# or
+
+$ npm install
+```
+
+<br/>
+
+```shell
+
+#Run
+
+# For execute developer mode.
+
+$ yarn dev
+
+
+# For execute build mode.
+
+$ yarn build
+
+
+# To execute the already build code (necessary to develop the yarn build).
+
+$ yarn start
+
+```
 
 <br/> 
 <br/>
