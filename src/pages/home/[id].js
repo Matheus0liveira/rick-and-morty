@@ -24,7 +24,7 @@ import { Container } from '../../assets/globalStyles';
 import SwipeDown from '../../../public/swipeDown.json';
 import Loading from '../../../public/loading.json';
 
-import Card from '../../compoenents/Card';
+import Card from '../../components/Card';
 
 import api from '../../api/profiles';
 

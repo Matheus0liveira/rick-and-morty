@@ -7,7 +7,7 @@ import Head from 'next/head';
 
 import { GlobalStyles } from '../assets/globalStyles';
 
-import Header from '../compoenents/Header';
+import Header from '../components/Header';
 
 function MyApp({ Component, pageProps }) {
 
