@@ -49,7 +49,7 @@ This project aims to show characters from the series Rick And Morty and their cu
 
 ### <p id='install'>🔥 Install</p>
 
-#### First clone the project
+#### First clone the project.
 
 ```shell
 $ git clone https://github.com/Matheus0liveira/rick-and-morty.git
@@ -57,7 +57,7 @@ $ git clone https://github.com/Matheus0liveira/rick-and-morty.git
 
 <br/>
 
-#### Next step install dependencies
+#### Next step install dependencies.
 
 ```shell
 $ yarn
@@ -69,9 +69,10 @@ $ npm install
 
 <br/>
 
+#### To finish running code.
+
 ```shell
 
-#Run
 
 # For execute developer mode.
 
