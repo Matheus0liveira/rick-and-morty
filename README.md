@@ -97,14 +97,15 @@ $ yarn start
 
 #### Desktop
 
-<p align='center'>
+<div align='center'>
+
 <img src='./.github/gifDesktop.gif' width='700'>
 
 #### Mobile
 
 <img src='./.github/gifMobile.gif' height='425'>
 
-</p>
+</div>
 
 <br/> 
 <br/>
